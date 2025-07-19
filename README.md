@@ -35,10 +35,6 @@ StockTracker/
 ├── admin.json # Stores admin credentials
 ├── companyDB.json # Stores company data
 
-yaml
-Copy
-Edit
-
 ---
 
 ## ▶️ How to Run
@@ -47,19 +43,7 @@ Edit
    ```bash
    git clone https://github.com/your-username/StockTracker.git
    cd StockTracker
-(Optional) Create a virtual environment:
-
-bash
-Copy
-Edit
-python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
-Run the app:
-
-bash
-Copy
-Edit
-python main.py
+streamlit run main.py
 📄 Example Admin Credentials
 To get started, you may add an admin entry manually in admin.json:
 
@@ -88,7 +72,7 @@ Welcome To Stock Tracker!!!
 3. Delete Company
 4. Logout
 💡 Future Improvements
-GUI using Tkinter or Streamlit
+Use of AI to get market updates and also to calculate profit or loss per stock
 
 Company stock values and analytics
 
