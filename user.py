@@ -14,7 +14,7 @@ class User:
         self.__transactions = transactions or []
 
     def __save(self):
-        userDBInstance.updateUserData(self.userName, {
+        userDBInstance.updateUserData(self.username, {
             "portfolio": self.__userPortfolio,
             "requests": self.__requests,
             "transactions": self.__transactions 
@@ -31,7 +31,7 @@ class User:
 
             self.__userPortfolio[originalName] = self.__userPortfolio.get(originalName, 0) + quantity
             self.__save()
-            return f"Added {originalName} to {self.userName}'s portfolio"
+            return f"Added {originalName} to {self.username}'s portfolio"
         except Exception as e:
             return f"An error occurred: {e}"
 
