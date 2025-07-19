@@ -14,7 +14,7 @@ class User:
         self.__transactions = transactions or []
 
     def __save(self):
-        userDBInstance.updateUserData(self.username, {
+        userDBInstance.updateUserData(self.userName, {
             "portfolio": self.__userPortfolio,
             "requests": self.__requests,
             "transactions": self.__transactions 
@@ -31,7 +31,7 @@ class User:
 
             self.__userPortfolio[originalName] = self.__userPortfolio.get(originalName, 0) + quantity
             self.__save()
-            return f"Added {originalName} to {self.username}'s portfolio"
+            return f"Added {originalName} to {self.userName}'s portfolio"
         except Exception as e:
             return f"An error occurred: {e}"
 
@@ -62,7 +62,7 @@ class User:
     def viewRequests(self):
         if not self.__requests:
             return "No pending requests."
-        request_list = f"{self.username}'s Requested Companies:\n"
+        request_list = f"{self.userame}'s Requested Companies:\n"
         for company in self.__requests:
             request_list += f"{company.title()} → {self.__requests[company]}\n"
         return request_list.strip()
