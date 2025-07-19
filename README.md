@@ -43,7 +43,7 @@ StockTracker/
    ```bash
    git clone https://github.com/your-username/StockTracker.git
    cd StockTracker
-   ```bash
+   
    streamlit run main.py
 📄 Example Admin Credentials
 To get started, you may add an admin entry manually in admin.json:
